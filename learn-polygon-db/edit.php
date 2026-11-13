@@ -26,6 +26,7 @@ if (count($ring) > 1) {
 foreach($ring as $point) {
     $initial_coords[] = [$point[0],$point[1]];
 }
+
 // Close the connection
 mysqli_close($connection);
 ?>
@@ -133,6 +134,8 @@ mysqli_close($connection);
             const position = m.getLatLng();
             return [position.lat, position.lng];
         });
+
+        console.log(coordinates);
 
         // Show marker order when clicked
         markers.forEach((marker,index) => {

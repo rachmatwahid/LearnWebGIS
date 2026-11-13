@@ -68,7 +68,7 @@ mysqli_close($connection);
     areas.forEach(function(area) {
         // Read GeoJSON
         const layer = L.geoJSON(area.geojson);
-
+        console.log(area.geojson);
         // Set up popup for area name
         layer.bindPopup(`${area.name}`);
 
